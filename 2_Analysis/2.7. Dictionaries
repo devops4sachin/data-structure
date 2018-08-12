@@ -1,0 +1,15 @@
+- The thing that is most important to notice right now is that the get item and set item operations on a dictionary are O(1).
+- Another important dictionary operation is the contains operation. Checking to see whether a key is in the dictionary or not is also O(1). 
+
+operation	    Big-O Efficiency
+copy	        O(n)
+get item	    O(1)
+set item	    O(1)
+delete item	    O(1)
+contains (in)	O(1)
+iteration	    O(n)
+
+- In the process we will confirm that the contains operator for lists is O(n) and the contains operator for dictionaries is O(1). The experiment we will use to compare the two is simple. We’ll make a list with a range of numbers in it. Then we will pick numbers at random and check to see if the numbers are in the list. If our performance tables are correct the bigger the list the longer it should take to determine if any one number is contained in the list.
+- We will repeat the same experiment for a dictionary that contains numbers as the keys. In this experiment we should see that determining whether or not a number is in the dictionary is not only much faster, but the time it takes to check should remain constant even as the dictionary grows larger.
+
+- Check 2.7.1Listing1.py file

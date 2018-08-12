@@ -1,0 +1,11 @@
+- So in order to convert an expression, no matter how complex, to either prefix or postfix notation, fully parenthesize the expression using the order of operations. Then move the enclosed operator to the position of either the left or the right parenthesis depending on whether you want prefix or postfix notation.
+
+- for example : (A+B)*C-(D-E)*(F+G)
+    - parenthesis all the expression.
+        (((A+B)*C) - ((D-E)*(F+G)))
+    
+    - prefix expression :
+        - * + A B C * - D E + F G
+
+    - postfix expression :
+        A B + C * D E - F G + * -

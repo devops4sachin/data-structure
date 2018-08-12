@@ -1,0 +1,42 @@
+- A good basic unit of computation = might be to count the number of assignment statements performed to compute the sum. In the function sumOfN, the number of assignment statements is 1 (theSum=0) plus the value of n (the number of times we perform theSum=theSum+i).
+    - We can denote this by a function, call it T, where T(n)=1+n. The parameter n is often referred to as the “size of the problem,” and we can read this as “T(n) is the time it takes to solve a problem of size n, namely 1+n steps.”
+    - Our goal then is to show how the algorithm’s execution time changes with respect to the size of the problem.
+
+    -  In other words, as the problem gets larger, some portion of the T(n) function tends to overpower the rest. This dominant term is what, in the end, is used for comparison. The order of magnitude function describes the part of T(n) that increases the fastest as the value of n increases.
+    - Order of magnitude is often called Big-O notation (for “order”) and written as O(f(n)). It provides a useful approximation to the actual number of steps in the computation. 
+    - The function f(n) provides a simple representation of the dominant part of the original T(n).
+
+    - In the above example, T(n)=1+n. As n gets large, the constant 1 will become less and less significant to the final result. If we are looking for an approximation for T(n), then we can drop the 1 and simply say that the running time is O(n).
+
+    - As another example, suppose that for some algorithm, the exact number of steps is T(n)=5(n^2)+27n+1005. When n is small, say 1 or 2, the constant 1005 seems to be the dominant part of the function. However, as n gets larger, the n2 term becomes the most important.
+    - To approximate T(n) as n gets large, we can ignore the other terms and focus on 5n2. In addition, the coefficient 5 becomes insignificant as n gets large. We would say then that the function T(n) has an order of magnitude f(n)=n2, or simply that it is O(n2).
+
+    - Increasing order of time complexity.
+
+    f(n)	        Name
+    1	        Constant
+    logn	    Logarithmic
+    n	        Linear
+    nlogn	    Log Linear
+    n2	        Quadratic
+    n3	        Cubic
+    2n	        Exponential
+
+
+    -  suppose that we have the fragment of Python code as below.it is instructive to see how we can take actual code and analyze performance.
+
+    a=5
+    b=6
+    c=10
+    for i in range(n):
+    for j in range(n):
+        x = i * i
+        y = j * j
+        z = i * j
+    for k in range(n):
+    w = a*k + 45
+    v = b*b
+    d = 33
+
+    - The number of assignment operations is the sum of four terms. T(n)=3+3(n^2)+2n+1 = 3(n^2)+2n+4
+    - we can easily see that the n2 term will be dominant and therefore this fragment of code is O(n2). Note that all of the other terms as well as the coefficient on the dominant term can be ignored as n grows larger.

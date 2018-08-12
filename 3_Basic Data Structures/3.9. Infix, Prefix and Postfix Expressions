@@ -1,0 +1,9 @@
+- Prefix expression notation requires that all operators precede the two operands that they work on.
+-Postfix, on the other hand, requires that its operators come after the corresponding operands.
+
+Infix Expression	Prefix Expression	Postfix Expression
+A + B	            + A B	            A B +
+A + B * C	        + A * B C	        A B C * +
+(A + B) * C	        * + A B C	        A B + C *
+A + B * C + D	    + + A * B C D	    A B C * + D +
+(A + B) * (C + D)	* + A B + C D	    A B + C D + *
